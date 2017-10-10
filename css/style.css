@@ -1,0 +1,502 @@
+/*GRID PATTERN FROM https://css-tricks.com/dont-overthink-it-grids/ */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid {
+  margin: 0; }
+
+.grid:after {
+  /* Or @extend clearfix */
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*='col-'] {
+  float: left;
+  padding-right: 2%; }
+
+.nopad {
+  padding: 0; }
+
+.col-1-1 {
+  width: 100%; }
+
+.col-2-3 {
+  width: 66%; }
+
+.col-1-3 {
+  width: 33%; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-3-4 {
+  width: 75%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-4-5 {
+  width: 80%;
+  float: right; }
+
+.col-1-6 {
+  width: 16.66667%; }
+
+.col-5-6 {
+  width: 83%; }
+
+.col-1-12 {
+  width: 8.333%; }
+
+.col-7-12 {
+  width: 58.333%; }
+
+.col-11-12 {
+  width: 91.666667%; }
+
+.pad-1-8 {
+  padding: 0 12.5%; }
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 2% 0 2% 2%; }
+
+.grid-pad [class*='col-']:last-of-type {
+  padding-right: 2%; }
+
+.grid-pad-colwide {
+  padding: 6% 8% 6% 8%; }
+
+.grid-pad-125 {
+  padding: 0 12.5%; }
+
+.padright {
+  padding-right: 8%; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.mobileonly {
+  display: none; }
+
+body {
+  background-color: #d6e4e4;
+  font-size: 100%;
+  margin: 0; }
+
+.bgcolor {
+  background-color: white; }
+
+#wrapper {
+  background-color: #f4f3ef;
+  max-width: 960px;
+  margin: 0 auto; }
+
+#wrapperwhitebg {
+  background-color: white;
+  max-width: 960px;
+  margin: 0 auto; }
+
+main {
+  background-color: #f4f3ef; }
+
+p, td {
+  font-family: "Lora", "Georgia", serif;
+  color: #636466;
+  font-size: .85em;
+  line-height: 1.5;
+  letter-spacing: .01rem; }
+  p a, td a {
+    color: #a3b323;
+    font-weight: 700;
+    text-decoration: none; }
+
+.italic {
+  font-style: italic; }
+
+td {
+  padding-right: 2rem;
+  padding-bottom: .3rem; }
+
+h2 {
+  font-family: "Lora", "Georgia", serif;
+  font-weight: 400;
+  letter-spacing: .02rem;
+  font-size: 2.5rem;
+  color: #636466;
+  margin: 0;
+  padding-top: 20px; }
+
+header {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #0f4c7d; }
+  header img {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; }
+  header h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: .75em;
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    letter-spacing: .03rem; }
+
+nav {
+  background-color: white; }
+
+nav ul {
+  list-style: none;
+  padding: 20px 30px; }
+
+nav li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .8rem;
+  line-height: 1.5;
+  letter-spacing: .04rem;
+  color: #636466;
+  text-align: left;
+  padding: 10px 0; }
+
+.currentpage {
+  color: #6d8dad; }
+
+nav a, nav a:visited {
+  text-decoration: none; }
+
+nav li:hover {
+  color: #a3b323; }
+
+.navutility {
+  padding: 0 12.5% 15px 0; }
+  .navutility ul {
+    text-align: right; }
+  .navutility li {
+    display: inline;
+    font-family: "Open Sans", sans-serif;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .04rem;
+    color: #999;
+    padding: 0 10px; }
+  .navutility li:hover {
+    color: #0f4c7d; }
+  .navutility a {
+    text-decoration: none; }
+
+.widget {
+  padding: 0 20px 0 30px; }
+  .widget .contents {
+    border-top: 1px solid #ccc;
+    padding: 40px 0; }
+  .widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .widget ul li {
+    font-family: "Lora", "Georgia", serif;
+    font-style: italic;
+    font-size: .85rem;
+    color: #636466;
+    padding: 6px 0; }
+  .widget a {
+    color: #636466;
+    text-decoration: none; }
+  .widget li:hover {
+    color: #a3b323; }
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .8rem;
+  line-height: 1.8;
+  letter-spacing: .04rem;
+  color: #a3b323;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 20px; }
+
+.feature {
+  width: 100%;
+  padding-top: 10px; }
+
+.eyebrow {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: .18rem;
+  color: #0f4c7d;
+  text-align: left;
+  padding: 10px 0;
+  border-top: 1px solid #0f4c7d;
+  margin-top: 40px; }
+
+.galaside h3 {
+  font-family: "Lora", "Georgia", serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #0f4c7d;
+  text-align: center;
+  text-transform: none;
+  padding-bottom: 2px;
+  line-height: 1.1; }
+
+.galaside h4 {
+  font-family: "Lora", "Georgia", serif;
+  font-size: .7rem;
+  font-weight: 400;
+  color: #a3b323;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .02rem;
+  margin: 0; }
+
+.galaside h5 {
+  font-family: "Lora", "Georgia", serif;
+  font-size: .85rem;
+  font-weight: 400;
+  color: #0f4c7d;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .02rem;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: .2rem; }
+
+.galaside p {
+  color: #0f4c7d;
+  margin: 0;
+  text-align: center; }
+
+.smallpad {
+  padding: 1rem 0 .5rem;
+  font-size: .75rem; }
+
+.button {
+  clear: both; }
+  .button h4 {
+    background-color: #a3b323;
+    border: 1px solid white;
+    padding: 10px 20px 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.8;
+    letter-spacing: .04rem;
+    text-align: center;
+    margin: 30px 0; }
+
+.button a {
+  text-decoration: none; }
+  .button a h4 {
+    color: white; }
+
+.button a h4:hover {
+  border: 1px solid #999;
+  background-color: white;
+  color: #0f4c7d; }
+
+main .button {
+  text-align: left;
+  width: 30%;
+  margin-bottom: 40px; }
+
+.float-left-padrt {
+  float: left;
+  padding-right: 20px; }
+
+.float-right-padlf {
+  float: right;
+  padding-left: 20px; }
+
+.alignright {
+  text-align: right; }
+
+.alignleft {
+  text-align: left; }
+
+footer p {
+  font-size: .5rem;
+  text-align: center;
+  color: #999; }
+
+.navfooter {
+  padding: 10px 0 20px 0;
+  clear: both;
+  background-color: #0f4c7d;
+  display: inline-block;
+  text-align: center;
+  width: 100%; }
+  .navfooter ul {
+    text-align: center;
+    padding-left: 0;
+    display: inline-block; }
+  .navfooter li {
+    display: inline;
+    font-family: "Open Sans", sans-serif;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .04rem;
+    color: white;
+    padding: 0 20px; }
+  .navfooter li:hover {
+    color: #a3b323; }
+  .navfooter a {
+    text-decoration: none; }
+
+.half-text-input {
+  float: left;
+  width: 48%; }
+
+.lastname {
+  float: right; }
+
+.full-text-input {
+  clear: both;
+  float: left;
+  width: 100%; }
+
+form p {
+  margin: 0;
+  padding: 20px 0 6px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: .03rem;
+  font-size: .75rem; }
+
+input[type=text] {
+  width: 100%;
+  border: none;
+  height: 40px; }
+
+textarea {
+  width: 100%;
+  border: none;
+  height: 100px;
+  margin-bottom: 30px; }
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #d6e4e4;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+  .sidenav a {
+    font-size: 18px; } }
+
+/* -----------------MEDIA QUERIES ---------------------------- */
+@media only screen and (max-width: 760px) {
+  .col-1-5 {
+    width: 100%; }
+  .col-4-5 {
+    width: 100%; }
+  .desktoponly {
+    display: none; }
+  .eyebrow {
+    margin-top: 40px; } }
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding-bottom: 10px; }
+  h2 {
+    font-size: 1.8rem; }
+  main .button {
+    width: 100%; }
+  .mobileonly {
+    display: inline-block; }
+    .mobileonly #logo {
+      width: 35%;
+      min-width: 150px;
+      float: left; }
+    .mobileonly #menu {
+      float: right;
+      padding-top: 15px; }
+    .mobileonly h1 {
+      clear: both;
+      padding-top: 15px; }
+  .sidenav ul {
+    list-style: none;
+    padding: 20px 30px; }
+  .sidenav li {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.8;
+    letter-spacing: .04rem;
+    color: #636466;
+    text-align: left;
+    padding: 4px 0; }
+  .sidenav a, .sidenav a:visited {
+    text-decoration: none; }
+  .sidenav li:hover, .sidenav li:active {
+    color: #a3b323; }
+  .sidenav .closebtn {
+    color: #6d8dad; }
+  .sidenav .utility {
+    font-weight: 400;
+    color: #999; } }
+
+/*----------- 0 to 690 COLLAPSE NAV and SHOW HAMBURGER TOGGLE-----------*/
+/*----------- 0 to 600 COLLAPSE NAV and SHOW HAMBURGER TOGGLE-----------*/

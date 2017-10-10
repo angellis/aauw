@@ -1,0 +1,604 @@
+
+$water: #f4f3ef;
+$graylt: #ccc;
+$graymd: #999;
+$graydk: #636466;
+$bluelt: #d6e4e4;
+$bluelogo: #0f4c7d;
+$bluedk: #001d3e;
+$bluemed: #6d8dad;
+$green: #a3b323;
+
+$serif: 'Lora', 'Georgia', serif;
+$sans: 'Open Sans', sans-serif;
+
+$unit: 20px;
+
+/*GRID PATTERN FROM https://css-tricks.com/dont-overthink-it-grids/ */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid {
+  margin: 0; }
+  .grid:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both; }
+
+[class*='col-'] {
+  float: left;
+  padding-right: 2%; }
+
+.nopad {
+  padding: 0; }
+
+.col-1-1 {
+  width: 100%; }
+
+.col-2-3 {
+  width: 66%; }
+
+.col-1-3 {
+  width: 33%; }
+
+.col-1-2 {
+  width: 50%; }
+
+.col-1-4 {
+  width: 25%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-3-4 {
+    width: 75%; }
+
+.col-1-5 {
+    width: 20%;  }
+
+.col-4-5 {
+    width: 80%;
+    float: right;}
+
+.col-1-6 {
+  width: 16.66667%; }
+
+.col-5-6 {
+  width: 83%; }
+
+.col-1-12 {
+  width: 8.333%; }
+
+.col-7-12 {
+  width: 58.333%; }
+
+.col-11-12 {
+  width: 91.666667%; }
+
+.pad-1-8 {
+  padding: 0 12.5%; }
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 2% 0 2% 2%; }
+  .grid-pad [class*='col-']:last-of-type {
+    padding-right: 2%; }
+
+.grid-pad-colwide {
+  padding: 6% 8% 6% 8%; }
+
+.grid-pad-125 {
+  padding: 0 12.5%; }
+
+.padright {
+  padding-right: 8%; }
+
+//end of CSS-tricks column code
+//clearfix from CSS-tricks https://css-tricks.com/snippets/css/clear-fix/
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.mobileonly {
+    display: none;
+}
+body {
+    background-color: $bluelt;
+    font-size: 100%; 
+    margin: 0;
+}
+.bgcolor {
+    background-color: white;
+}
+
+#wrapper {
+    background-color: $water;
+    max-width: 960px; 
+    margin: 0 auto;
+}
+#wrapperwhitebg {  //for wrapper on long stories like STEM
+    background-color: white;
+    max-width: 960px; 
+    margin: 0 auto;}
+
+main {
+    background-color: $water;
+}
+
+p, td {
+	font-family: $serif;
+	color: $graydk;
+	font-size: .85em;
+	line-height: 1.5;
+    letter-spacing: .01rem;
+    
+    a {
+        color: $green;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
+.italic {
+    font-style: italic;
+}
+td {
+    padding-right: 2rem;
+    padding-bottom: .3rem;
+}
+h2 {
+	font-family: $serif;
+    font-weight: 400;
+    letter-spacing: .02rem;
+    font-size: 2.5rem;
+    color: $graydk;	
+    margin: 0;
+    padding-top: $unit;
+}
+header {
+	width: 100%;
+	height: auto;
+    padding: $unit;
+	background: $bluelogo;
+    
+    img {
+        margin: 0 auto;
+        padding: 0 $unit;
+        width:100%;
+    }
+    h1 {
+        font-family: $sans;
+        font-size: .75em;
+        font-style: italic;
+        font-weight: 100;
+        color: white;
+        text-align: center;
+        letter-spacing: .03rem;
+    }
+}
+nav {
+	background-color: white;
+}
+nav ul {
+	list-style: none;
+    padding: $unit $unit*1.5;    
+}
+nav li {
+    font-family: $sans;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.5;
+    letter-spacing: .04rem;
+    color: $graydk;
+    text-align: left;
+    padding: $unit*.5 0;
+}
+.currentpage {
+    color: $bluemed;
+}
+nav a, nav a:visited {
+	text-decoration: none;
+}
+nav li:hover {
+	color: $green;
+}
+
+.navutility {  //will be used for join/donate later
+    padding: 0 12.5% $unit*.75 0;
+    ul {
+        text-align: right;
+    }
+    li {
+        display: inline;
+        font-family: $sans;
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .04rem;
+        color: $graymd;
+        padding: 0 $unit*.5;
+    }
+    li:hover {
+        color: $bluelogo;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.widget {
+    padding: 0 $unit 0 $unit*1.5;    
+    .contents {
+        border-top: 1px solid $graylt;
+        padding: $unit*2 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        font-family: $serif;
+        font-style: italic;
+        font-size: .85rem;
+        color: $graydk;
+        padding: $unit*.3 0;
+    }
+    a {
+        color: $graydk;
+        text-decoration: none;
+    }
+    li:hover {
+        color: $green;
+    }
+}
+
+h3 {
+    font-family: $sans;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.8;
+    letter-spacing: .04rem;
+    color: $green;
+    text-align: left;
+    margin: 0;
+    padding-bottom: $unit;
+}
+
+.feature {
+    width: 100%;
+    padding-top: $unit*.5;
+}
+.eyebrow {
+    font-family: $sans;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: .18rem;
+    color: $bluelogo;
+    //background-color: $green;
+    text-align: left;
+    //padding: $unit*.5 0 $unit*.5 $unit;
+    padding: $unit*.5 0;
+    border-top: 1px solid $bluelogo;
+    margin-top: $unit*2;
+}
+.galaside {
+    h3 {
+        font-family: $serif;
+        font-size: 1.7rem;
+        font-style: italic;
+        font-weight: 400;
+        color: $bluelogo;
+        text-align: center;
+        text-transform: none;
+        padding-bottom: 2px;
+        line-height: 1.1;
+    }
+    h4 {
+        font-family: $serif;
+        font-size: .7rem;
+        font-weight: 400;
+        color: $green;
+        text-align: center;
+        text-transform: uppercase; 
+        letter-spacing: .02rem;
+        margin: 0;
+    }
+    h5 {
+        font-family: $serif;
+        font-size: .85rem;
+        font-weight: 400;
+        color: $bluelogo;
+        text-align: center;
+        text-transform: uppercase; 
+        letter-spacing: .02rem;
+        margin: 0;
+        padding-top: 1rem;
+        padding-bottom: .2rem;
+    }
+    p {
+        color: $bluelogo;
+        margin: 0;
+        text-align: center;
+    }
+}
+.smallpad {
+    padding: 1rem 0 .5rem;
+    font-size: .75rem
+}
+
+.button {
+    clear: both;
+    h4 {
+    background-color: $green;
+    border: 1px solid white;
+    padding: $unit*.5 $unit $unit*.5 $unit;
+    font-family: $sans;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.8;
+    letter-spacing: .04rem;
+    text-align: center;
+    margin: $unit*1.5 0;
+    }
+}
+.button a {
+    text-decoration: none;
+
+    h4 {
+        color: white;
+    }
+}
+.button a h4:hover {
+    //background-color: $green;
+    //border: none;
+    //color: white;
+    border: 1px solid $graymd;
+    background-color: white;
+    color: $bluelogo;
+}
+main .button {
+    text-align: left;
+    width: 30%;
+    margin-bottom: $unit*2;
+}
+.float-left-padrt {
+    float: left;
+    padding-right: $unit;
+}
+.float-right-padlf {
+    float: right;
+    padding-left: $unit;
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: left;
+}
+
+footer p {
+    font-size: .5rem;
+    text-align: center;
+    color: $graymd;
+}
+.navfooter {  
+    padding: $unit*.5 0 $unit 0;
+    clear: both;
+    background-color: $bluelogo;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    ul {
+        text-align: center;
+        padding-left: 0;
+        //padding-bottom: $unit*.75;
+        display: inline-block;
+    }
+    li {
+        display: inline;
+        font-family: $sans;
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: .04rem;
+        color: white;
+        padding: 0 $unit;
+    }
+    li:hover {
+        color: $green;
+    }
+    a {
+        text-decoration: none;
+
+    }
+}
+.half-text-input  {
+    float: left;
+    width: 48%;
+}
+.lastname {
+    float: right;
+}
+.full-text-input {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+form p {
+    margin: 0;
+    padding: $unit 0 $unit*.3;
+    font-family: $sans;
+    letter-spacing: .03rem;
+    font-size: .75rem;
+}
+input[type=text] {
+    width: 100%;
+    border: none;
+    height: $unit*2;
+}
+textarea {
+    width: 100%;
+    border: none;
+    height: $unit*5;
+    margin-bottom: $unit*1.5;
+}
+
+
+
+// BEGINNING OF HAMBURGER MENU ADAPTED FROM http://www.w3schools.com/howto/howto_js_sidenav.asp
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: $bluelt; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+// END OF HAMBURGER MENU ADAPTED FROM http://www.w3schools.com/howto/howto_js_sidenav.asp
+
+
+/* -----------------MEDIA QUERIES ---------------------------- */
+
+
+@media only screen and (max-width:877px){
+    .navfooter li {
+     //   padding: 0 $unit*.5;
+    }
+	
+}
+@media only screen and (max-width:760px){
+    .col-1-5 {
+        width: 100%;  }
+
+    .col-4-5 {
+        width: 100%;  }
+    .desktoponly {
+        display: none;
+    }
+    .eyebrow {
+        margin-top: $unit*2; 
+    }
+}
+@media only screen and (max-width: 600px) {
+    header {
+        padding-bottom: $unit*.5;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    main .button {
+        width: 100%;
+    }
+    
+    .mobileonly {
+        display: inline-block;
+        
+        #logo {
+            width: 35%;
+            min-width: 150px;
+            float: left;
+        }
+        #menu {
+            float: right;
+            padding-top: $unit*.75;
+        }
+        h1 {
+            clear: both;
+            padding-top: $unit*.75
+                ;
+        }
+    }
+    .sidenav {
+        ul {
+            list-style: none;
+            padding: $unit $unit*1.5;    
+        }
+        li {
+            font-family: $sans;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: .8rem;
+            line-height: 1.8;
+            letter-spacing: .04rem;
+            color: $graydk;
+            text-align: left;
+            padding: $unit*.2 0;
+        }
+        a, a:visited {
+            text-decoration: none;
+        }
+        li:hover, li:active {
+            color: $green;
+        }
+        .closebtn {
+            color: $bluemed;
+        }
+        .utility {
+            font-weight: 400;
+            color: $graymd;
+        }
+    }
+}
+
+/*----------- 0 to 690 COLLAPSE NAV and SHOW HAMBURGER TOGGLE-----------*/
+@media only screen and (min-width:0px) and (max-width:690px){
+	
+	
+
+
+}
+/*----------- 0 to 600 COLLAPSE NAV and SHOW HAMBURGER TOGGLE-----------*/
+@media only screen and (min-width:0px) and (max-width:600px){
+ 
+}
+    
+    
+    
+    
